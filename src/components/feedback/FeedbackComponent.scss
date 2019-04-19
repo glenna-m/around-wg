@@ -1,0 +1,79 @@
+@import '../../shared-vars.scss';
+
+#feedbk-done-btn {
+  margin: 1.25rem 0;
+}
+
+#feedbk-checkbox {
+   height: 12px;
+   width: 12px;
+}
+
+#feedbk-checkbox-label {
+  margin: .5rem 1.5rem; 
+}
+
+#feedbk-checkbox-div {
+  margin-top: .5rem;
+  text-align: left;
+}
+
+.feedbk-card {
+  border: $border-primary;
+  box-shadow: 3px 3px 5px rgba(33,33,33,.7);
+}
+
+.feedbk-card:hover {
+  box-shadow:5px 5px 7px rgba(0,0,0,.7);
+  transform: scale(1.25);
+  position:relative;
+  z-index:5;
+}
+
+.feedbk-card-body {
+  background-color: #baddbe; 
+  padding-top: 0;
+}
+
+.feedbk-card-title {
+  background-color: #094933;
+  color: $font-secondary-color;
+  padding: .5rem;
+  margin-bottom: 0;
+}
+
+.feedbk-date {
+   text-align: right;
+}
+
+.feedbk-errors {
+  text-align: left;
+}
+
+.feedbk-input-text {
+  margin: .5rem 0; 
+}
+
+.feedbk-name {
+  font-size: 1.3rem;
+}
+
+.feedbk-tabbed-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.feedback-tabs {
+  margin: 1rem;
+  text-align: left;
+}
+
+.react-tabs__tab-list {
+  border-color: $border-primary-color;
+}
+
+.react-tabs__tab--selected {
+  border-color: $border-primary-color;
+  color: ForestGreen;
+  font-weight: bold;
+}

@@ -1,0 +1,28 @@
+@import '../../shared-vars.scss';
+
+#hdr-confirm-modal-msg {
+  background-color: SeaGreen;
+  border-bottom: 0;
+  border-radius: .3rem;
+  color: $font-secondary-color;
+  font-family: $font-primary-family;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.0;
+  text-align: center;
+}
+
+.hdr-login-input {
+  margin: 1rem .5rem; 
+  width: 95%;
+}
+
+#hdr-modal-login-btn {
+  margin-left: .5rem;
+}
+
+#hdr-logo {
+  height: 35px;
+  margin: 5px;
+}
+

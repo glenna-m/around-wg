@@ -1,0 +1,24 @@
+@import '../../shared-vars.scss';
+
+.recipe-type-card {
+  background-color: transparent;
+  border: none;
+}
+
+.recipe-type-card-img {
+  height: 125px;
+  width: 125px;
+}
+
+.recipe-type-card-title {
+  color: $font-primary-color;
+  font-size: 1.75rem;
+  line-height: 0.75;
+  text-align: center;
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+  width: 125px;
+}
+
+#recipeTypes {
+  padding-bottom: 4rem;
+}
