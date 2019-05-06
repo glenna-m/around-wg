@@ -1,0 +1,97 @@
+{
+  "blog": [
+    {
+      "id": 0,
+      "date": "2019-05-04T03:23:50.800Z",
+      "location": "Willow Glen, CA",
+      "comments": 
+        "Around Willow Glen is a friendly place to learn and share tips about life in our local community: events, recommendations, gardening, cooking, photography, and more. This is a free resource to the community, and is not funded by any business interests. You do not need to login to read content, but will need an approved account to post. Posts will be moderated for truthful, kind and respectful, locally relevant content. Welcome, friend."
+    },
+    {
+      "id": 1,
+      "date": "2019-05-06T05:23:50.800Z",
+      "location": "Corner of Newport and Minnesota Ave",
+      "photo": "assets/images/town/newport-sj-white-lattice.jpg",
+      "comments": 
+        "No more room for potted plants? This creative vertical plant space maker might be the answer. Spotted this clever lattice trellis while walking the dog.  White paint and well-placed lighting make it stand out in the moonlight."
+    }
+  ],
+  "feedback": [
+    {
+      "id": 0,
+      "date": "2019-4-18T15:50:28.561Z",
+      "name": "Glenna M",
+      "okToContact": true,
+      "phone": "408-123-4567",
+      "email": "glenna@gmail.com",
+      "message": "Cool stuff!"
+    },
+    {
+      "id": 1,
+      "date": "2019-4-19T14:30:17.561Z",
+      "name": "Dicie G",
+      "okToContact": false,
+      "phone": "408-234-5678",
+      "email": "dicie@gmail.com",
+      "message": "Confusing! I can't find anything in here - need more pictures and a lot more description."
+    },
+    {
+      "id": 2,
+      "date": "2019-4-20T14:11:12.561Z",
+      "name": "Sheryl S",
+      "okToContact": true,
+      "phone": "408-345-6789",
+      "email": "sheryl@redis.com",
+      "message": "Have you thought about using Redis?  Call me!"
+    },
+    {
+      "id": 3,
+      "date": "2019-4-22T13:12:16.561Z",
+      "name": "Charis B",
+      "okToContact": true,
+      "message": "You should add some photos of cute puppies in the garden."
+    }
+  ],
+  "recipe_types": [
+    {
+      "id": 0,
+      "name": "Appetizers",
+      "image": "assets/images/recipe-types/appetizers.png"
+    },
+    {
+      "id": 1,
+      "name": "Beverages",
+      "image": "assets/images/recipe-types/beverages.png"
+    },
+    {
+      "id": 2,
+      "name": "Breads",
+      "image": "assets/images/recipe-types/bread.png"
+    },
+    {
+      "id": 3,
+      "name": "Breakfast",
+      "image": "assets/images/recipe-types/breakfast.png"
+    },
+    {
+      "id": 4,
+      "name": "Desserts",
+      "image": "assets/images/recipe-types/desserts.png"
+    },
+    {
+      "id": 5,
+      "name": "Salads",
+      "image": "assets/images/recipe-types/salad.png"
+    },
+    {
+      "id": 6,
+      "name": "Soups",
+      "image": "assets/images/recipe-types/soups.png"
+    },
+    {
+      "id": 7,
+      "name": "Vegetables",
+      "image": "assets/images/recipe-types/vegetables.png"
+    }
+  ]
+}

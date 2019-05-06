@@ -1,11 +1,64 @@
 import React from "react";
 import { Jumbotron, Media } from "reactstrap";
 
+import { Loading } from '../LoadingComponent';
 import { baseUrl } from "../../shared/baseUrl";
 
 import "./BlogComponent.css";
 
-function Blog() {
+function RenderBlogEntry({ entry }) {
+  const entryDate = new Date( entry.date );
+
+  return(
+    <div className="blog-row row">
+
+      <h2 className="blog-date"> 
+          { entryDate.toLocaleDateString("en-US") } 
+      </h2>
+
+      <div className="container">
+        <div className="row">
+          { entry.photo ? 
+             <Media left middle>
+               <Media object src={baseUrl + entry.photo} 
+                      alt="Blog Entry Photo" />
+               </Media> 
+            : null 
+          }
+
+          <Media body>
+            <Media heading> {entry.location} </Media>
+              <p className="blog-p">
+                {entry.comments}
+              </p>
+            </Media>
+
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Blog(props) {
+
+  if (props.isLoading) {
+    return(
+      <Loading />
+    );
+  }
+
+  if (props.errMess) {
+    return(
+       <h4>{props.errMess}</h4>
+    );
+  }
+
+  const blogEntries = props.blogEntries.map((entry) => {
+    return (
+      <p> <RenderBlogEntry key={entry.id} entry={entry} /> </p>
+    );
+  });
+
   return (
     <React.Fragment>
       <Jumbotron>
@@ -25,48 +78,13 @@ function Blog() {
       </Jumbotron>
 
       <div id="blog-items" className="container">
-        <div className="blog-row row">
-          <h2 className="blog-date">April 11, 2019</h2>
-          <div className="container">
-            <div className="row">
-              <Media left middle>
-                <Media
-                  object
-                  src={`${baseUrl}assets/images/town/newport-sj-white-lattice.jpg`}
-                  alt="White Lattice"
-                />
-              </Media>
-              <Media body>
-                <Media heading>Newport Ave, San Jose</Media>
-                <p className="blog-p">
-                  No more room for potted plants? This creative vertical plant
-                  space maker might be the answer.
-                </p>
-                <p className="blog-p">
-                  Spotted this clever lattice trellis while walking the dog.
-                  White paint &amp; well-placed lighting make it stand out in
-                  the moonlight.
-                </p>
-              </Media>
-            </div>
-          </div>
-        </div>
-
-        <div className="blog-row row">
-          <h2 className="blog-date">April 10, 2019</h2>
-          <p className="blog-p">
-            Around Willow Glen is a friendly place to learn and share tips about
-            life in our local community: events, recommendations, gardening,
-            cooking, photography, and more. This is a free resource to the
-            community, and is not funded by any business interests. You do not
-            need to login to read content, but will need an approved account to
-            post. Posts will be moderated for truthful, kind and respectful,
-            locally relevant content. Welcome, friend.
-          </p>
-        </div>
+        <Media list>
+          {blogEntries}
+        </Media>
       </div>
     </React.Fragment>
   );
+
 }
 
 export default Blog;

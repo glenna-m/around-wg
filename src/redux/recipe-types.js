@@ -1,32 +1,32 @@
 import * as ActionTypes from './ActionTypes';
 
-export const Feedback = (state = {
+export const RecipeTypes = (state = {
         isLoading: true,
         errMess: null,
-        feedback: []
+        recipeTypes: []
     }, action) => {
 
     switch(action.type) {
 
-        case ActionTypes.ADD_FEEDBACK:
+        case ActionTypes.ADD_RECIPE_TYPE:
             return {...state,
                     isLoading: false,
                     errMess: null,
-                    feedback: action.payload
+                    recipeTypes: action.payload
             }
 
-        case ActionTypes.FEEDBACK_LOADING:
+        case ActionTypes.RECIPE_TYPES_LOADING:
             return {...state,
                     isLoading: true,
                     errMess: null,
-                    feedback: []
+                    recipeTypes: []
             }
 
-        case ActionTypes.FEEDBACK_ACCESS_FAILED:
+        case ActionTypes.RECIPE_TYPE_ACCESS_FAILED:
             return {...state,
                     isLoading: false,
                     errMess: action.payload,
-                    feedback: []
+                    recipeTypes: []
             }
 
         default: return state;

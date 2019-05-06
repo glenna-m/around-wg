@@ -4,13 +4,18 @@ import { createForms } from "react-redux-form";
 import thunk from "redux-thunk";
 import logger from "redux-logger";
 
-import { RECIPE_TYPES } from "../shared/recipe-types";
-import { InitialFeedback } from "./feedback";
+import { Blog } from './blog';
+import { Feedback } from './feedback';
+import { RecipeTypes } from './recipe-types';
+
+import { InitialFeedback } from './Forms';
 
 export const configureStore = () => {
   const store = createStore(
     combineReducers({
-      recipeTypes: RECIPE_TYPES,
+      blog: Blog,
+      feedback: Feedback,
+      recipeTypes: RecipeTypes,
       ...createForms({
         feedback: InitialFeedback
       })
